@@ -4,6 +4,7 @@ import { LoginRoutingModule } from './login-routing.module';
 import { LoginComponent } from './components/login/login.component';
 import { CommonModule } from '@angular/common';
 import { MatButtonModule } from "@angular/material";
+import { RouterModule } from '@angular/router';
 
 
 @NgModule({
@@ -11,12 +12,9 @@ import { MatButtonModule } from "@angular/material";
   imports: [
     CommonModule,
     LoginRoutingModule,
-    MatButtonModule
-    
+    MatButtonModule,
+    RouterModule
   ],
-  exports: [
-    LoginComponent,
-    MatButtonModule
-    ]
+
 })
 export class LoginModule { }

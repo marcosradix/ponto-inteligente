@@ -1,3 +1,4 @@
+import { LoginRoutingModule } from './authentication/login/login-routing.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -15,9 +16,10 @@ import { LoginModule } from './authentication/login/login.module';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    AppRoutingModule,
-    LoginModule
+    LoginModule,
+    LoginRoutingModule,
     
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
