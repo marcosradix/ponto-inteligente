@@ -1,3 +1,4 @@
+import { Login } from './../../models/login.model';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators as valid } from "@angular/forms";
 import { Router } from "@angular/router";
@@ -37,7 +38,8 @@ form:FormGroup;
         });
         return;
     }
-    alert(JSON.stringify(this.form.value));
+    const login: Login = this.form.value;
+    alert(JSON.stringify(login));
   }
 
 }
