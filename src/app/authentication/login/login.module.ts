@@ -3,17 +3,38 @@ import { NgModule } from '@angular/core';
 import { LoginRoutingModule } from './login-routing.module';
 import { LoginComponent } from './components/login/login.component';
 import { CommonModule } from '@angular/common';
-import { MatButtonModule } from "@angular/material";
+import {
+   MatButtonModule,
+    MatInputModule, 
+    MatListModule,
+    MatTooltipModule,
+    MatIconModule,
+    MatSnackBarModule
+  }  from "@angular/material";
 import { RouterModule } from '@angular/router';
+import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
+import { FlexLayoutModule } from "@angular/flex-layout";
 
 @NgModule({
   declarations: [LoginComponent],
   imports: [
     CommonModule,
-    LoginRoutingModule,
+    RouterModule,
     MatButtonModule,
-    RouterModule
+    ReactiveFormsModule,
+    HttpClientModule,
+    MatInputModule,
+    MatListModule,
+    MatTooltipModule,
+    MatIconModule,
+    MatSnackBarModule,
+    FlexLayoutModule,
+
+
+
+    LoginRoutingModule,
   ],
 
 })
