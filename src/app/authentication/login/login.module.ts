@@ -1,3 +1,4 @@
+import { LoginService } from './services/login.service';
 import { NgModule } from '@angular/core';
 
 import { LoginRoutingModule } from './login-routing.module';
@@ -32,10 +33,12 @@ import { FlexLayoutModule } from "@angular/flex-layout";
     MatSnackBarModule,
     FlexLayoutModule,
 
-
-
     LoginRoutingModule,
   ],
+
+  providers:[
+    LoginService,
+  ]
 
 })
 export class LoginModule { }

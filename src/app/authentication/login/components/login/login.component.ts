@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators as valid } from "@angular/forms";
 import { Router } from "@angular/router";
 import { MatSnackBar } from "@angular/material";
+import { LoginService } from '../../services/login.service';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -15,7 +16,8 @@ form:FormGroup;
   constructor(
     private formBuilder:FormBuilder,
     private snackBar:MatSnackBar,
-    private router: Router
+    private router: Router,
+    private loginService: LoginService
   ) { }
 
   ngOnInit() {
@@ -23,8 +25,8 @@ form:FormGroup;
   }
   gerarForm(): void {
   this.form = this.formBuilder.group({
-    email: ['', [valid.required, valid.email]],
-    senha: ['', [valid.required, valid.minLength(6)]]
+    email: ['admin@empresa.com', [valid.required, valid.email]],
+    senha: ['123456', [valid.required, valid.minLength(6)]]
   });
   }
 
@@ -39,7 +41,29 @@ form:FormGroup;
         return;
     }
     const login: Login = this.form.value;
-    alert(JSON.stringify(login));
+    this.loginService.logar(login).subscribe(data =>{
+      console.log(JSON.stringify(login));
+      localStorage['token'] = data['data']['token'];
+      console.log("token : "+data['data']['token']);
+      const usuarioData = JSON.parse(
+        atob(data['data']['token'].split('.')[1]));
+        console.log(JSON.stringify(usuarioData));
+        if(usuarioData['role'] =='ROLE_ADMIN'){
+          alert("deve redirecionar para página de admin");
+
+        }else{
+          alert("deve redirecionar para usuário");
+        }
+    },error =>{
+      console.log(JSON.stringify(error));
+      let msg: string = "Tente novamente mais tarde.";
+      if(error['status'] == '401'){
+        msg = "Email e ou senha inválido(s)."
+      }
+      this.snackBar.open(msg, "Erro", {duration: 10000})
+    }
+    );
+    
   }
 
 }
