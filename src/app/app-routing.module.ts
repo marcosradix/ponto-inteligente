@@ -3,7 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
   {path: "", redirectTo: "/login", pathMatch: "full"},
-  // {path: "", loadChildren: "./authentication/login/login.module#LoginModule"}
+  {path: "cadastro-pj", loadChildren: "./authentication/cadastro-pj/cadastro-pj.module#CadastroPjModule"}
 ];
 
 @NgModule({
