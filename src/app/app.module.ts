@@ -9,9 +9,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { LoginModule } from './authentication/login/login.module';
 
 
+
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,

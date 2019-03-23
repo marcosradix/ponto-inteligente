@@ -1,3 +1,4 @@
+import { CadastroPJ } from './../../models/cadastro-pj.model';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators as valid } from "@angular/forms";
 import { MatSnackBar } from "@angular/material";
@@ -33,6 +34,7 @@ cadastrarPJ(){
   if(this.form.invalid){
     return;
   }
-  alert(JSON.stringify(this.form.value));
+  const cadastroPJ: CadastroPJ = this.form.value;
+  alert(JSON.stringify(cadastroPJ));
 }
 }

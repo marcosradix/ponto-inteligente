@@ -12,9 +12,10 @@ import { RouterModule } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { MascaraDirective } from '../directives/mascara.directive';
 
 @NgModule({
-  declarations: [],
+  declarations: [MascaraDirective],
   imports: [
     CommonModule,
     MatButtonModule,
@@ -40,6 +41,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     ReactiveFormsModule,
     HttpClientModule,
     FlexLayoutModule,
+    MascaraDirective
   ]
 })
 export class SharedModule { }
