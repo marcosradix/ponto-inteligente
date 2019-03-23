@@ -1,8 +1,10 @@
+import { CnpjValidator } from './../../../../shared/validators/cnpj.validator';
 import { CadastroPJ } from './../../models/cadastro-pj.model';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators as valid } from "@angular/forms";
 import { MatSnackBar } from "@angular/material";
 import { Router } from "@angular/router";
+import { CpfValidator } from '../../../../shared/validators/cpf.validator';
 @Component({
   selector: 'app-cadastro-pj-form',
   templateUrl: './cadastro-pj-form.component.html',
@@ -25,9 +27,9 @@ export class CadastroPjFormComponent implements OnInit {
       nome: ["" , [valid.required, valid.minLength(3)]],
       email: ["" , [valid.required , valid.email]],
       senha: ["" , [valid.required , valid.minLength(6)]],
-      cpf: ["" , [valid.required]],
+      cpf: ["" , [valid.required, CpfValidator]],
       razaoSocial: ["" , [valid.required , valid.minLength(5)]],
-      cnpj: ["" , [valid.required]]
+      cnpj: ["" , [valid.required, CnpjValidator]]
     });
   }
 cadastrarPJ(){
