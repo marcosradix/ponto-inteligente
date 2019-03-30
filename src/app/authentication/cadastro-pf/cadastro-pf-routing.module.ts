@@ -4,7 +4,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { CadastroPfComponent } from './components/cadastro-pf/cadastro-pf.component';
 
 const routes: Routes = [
-  {path: "", component: CadastroPfComponent,children:[{path:"", component:CadastroPfFormComponent}]}
+  {path: "", component: CadastroPfComponent, children:[{path : "", component : CadastroPfFormComponent}]}
 ];
 
 @NgModule({

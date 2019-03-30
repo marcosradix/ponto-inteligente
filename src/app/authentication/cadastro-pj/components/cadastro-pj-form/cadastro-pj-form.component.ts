@@ -1,11 +1,10 @@
 import { CadastroPjService } from './../../services/cadastro-pj.service';
-import { CnpjValidator } from './../../../../shared/validators/cnpj.validator';
 import { CadastroPJ } from './../../models/cadastro-pj.model';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators as valid } from "@angular/forms";
 import { MatSnackBar } from "@angular/material";
 import { Router } from "@angular/router";
-import { CpfValidator } from '../../../../shared/validators/cpf.validator';
+import { CpfValidator , CnpjValidator} from '../../../../shared/validators';
 @Component({
   selector: 'app-cadastro-pj-form',
   templateUrl: './cadastro-pj-form.component.html',
