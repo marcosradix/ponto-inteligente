@@ -26,7 +26,7 @@ export class CadastroPjFormComponent implements OnInit {
   gerarForm() {
     this.form = this.fb.group({
       nome: ["Administrador", [valid.required, valid.minLength(3)]],
-      email: ["admin@empresa.com", [valid.required, valid.email]],
+      email: ["user@empresa.com", [valid.required, valid.email]],
       senha: ["123456", [valid.required, valid.minLength(6)]],
       cpf: ["781.592.260-04", [valid.required, CpfValidator]],
       razaoSocial: ["Minha Empresa", [valid.required, valid.minLength(5)]],
