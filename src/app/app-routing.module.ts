@@ -4,7 +4,8 @@ import { Routes, RouterModule } from '@angular/router';
 const routes: Routes = [
   {path: "", redirectTo: "/login", pathMatch: "full"},
   {path: "cadastro-pj", loadChildren: "./authentication/cadastro-pj/cadastro-pj.module#CadastroPjModule"},
-  {path: "cadastro-pf", loadChildren: "./authentication/cadastro-pf/cadastro-pf.module#CadastroPfModule"}
+  {path: "cadastro-pf", loadChildren: "./authentication/cadastro-pf/cadastro-pf.module#CadastroPfModule"},
+  {path: "home", loadChildren: "./authentication/components/home/home/home.module#HomeModule"}
 
 ];
 

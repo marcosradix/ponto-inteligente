@@ -54,6 +54,7 @@ form:FormGroup;
         }else{
           alert("deve redirecionar para usuário");
         }
+        this.router.navigate(["/home"]);
     },error =>{
       console.log(JSON.stringify(error));
       let msg: string = "Tente novamente mais tarde.";
