@@ -7,6 +7,7 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 
 import { AppRoutingModule } from './app-routing.module';
 import { LoginModule } from './authentication/login/login.module';
+import { SharedModule } from './shared/shared/shared.module';
 
 
 
@@ -17,6 +18,7 @@ import { LoginModule } from './authentication/login/login.module';
   ],
   imports: [
     BrowserModule,
+    SharedModule,
     BrowserAnimationsModule,
     LoginModule,
     LoginRoutingModule,

@@ -6,7 +6,8 @@ import {
    MatListModule,
    MatTooltipModule,
    MatIconModule,
-   MatSnackBarModule
+   MatSnackBarModule,
+   MatToolbarModule
  }  from "@angular/material";
 import { RouterModule } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
@@ -29,6 +30,7 @@ import { MascaraDirective } from '../directives/mascara.directive';
     ReactiveFormsModule,
     HttpClientModule,
     FlexLayoutModule,
+    MatToolbarModule
   ],
   exports:[
     CommonModule,
@@ -42,7 +44,8 @@ import { MascaraDirective } from '../directives/mascara.directive';
     ReactiveFormsModule,
     HttpClientModule,
     FlexLayoutModule,
-    MascaraDirective
+    MascaraDirective,
+    MatToolbarModule
   ]
 })
 export class SharedModule { }
