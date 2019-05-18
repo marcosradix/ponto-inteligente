@@ -5,7 +5,8 @@
 export const environment = {
   production: false,
   baseUrl: "http://localhost:8080",
-  baseApiUrl: "http://localhost:8080/api"
+  baseApiUrl: "http://localhost:8080/api",
+  urlMapa: "https://www.google.com/maps/search/?api=1&query="
 };
 
 /*

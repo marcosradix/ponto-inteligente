@@ -7,7 +7,11 @@ import {
    MatTooltipModule,
    MatIconModule,
    MatSnackBarModule,
-   MatToolbarModule
+   MatToolbarModule,
+   MatTableModule,
+   MatPaginatorModule,
+   MatSortModule,
+   MatCardModule
  }  from "@angular/material";
 import { RouterModule } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
@@ -30,7 +34,11 @@ import { MascaraDirective } from '../directives/mascara.directive';
     ReactiveFormsModule,
     HttpClientModule,
     FlexLayoutModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule,
+    MatCardModule
   ],
   exports:[
     CommonModule,
@@ -45,7 +53,11 @@ import { MascaraDirective } from '../directives/mascara.directive';
     HttpClientModule,
     FlexLayoutModule,
     MascaraDirective,
-    MatToolbarModule
+    MatToolbarModule,
+    MatCardModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule
   ]
 })
 export class SharedModule { }
