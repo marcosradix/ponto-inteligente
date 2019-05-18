@@ -50,7 +50,8 @@ form:FormGroup;
         console.log(JSON.stringify(usuarioData));
         if(usuarioData['role'] =='ROLE_ADMIN'){
           alert("deve redirecionar para página de admin");
-
+          const d = {nome: "marcos", email:"marcosradix@gmail.com"}
+          localStorage.setItem("ok", JSON.stringify(d));
         }else{
           alert("deve redirecionar para usuário");
         }
